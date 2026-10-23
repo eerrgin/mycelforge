@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 const projectRoot = fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
-  base: "/ergin-lab/mycelforge/",
+  base: "/mycelforge/",
   publicDir: false,
   plugins: [tailwindcss(), react()],
   resolve: {
