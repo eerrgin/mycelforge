@@ -33,8 +33,8 @@ Node 22 gerekir. Bağımlılık yok.
 ```bash
 npm test
 npm run forge
-npm run forge examples/yuk.json
-npm run forge examples/yalitim.json --json
+npm run forge -- examples/yuk.json
+npm run forge -- examples/yalitim.json --json
 ```
 
 `npm run forge` üç örnek brief'in özetini basar. Bir JSON dosyası verilirse protokolü Markdown yazar.
