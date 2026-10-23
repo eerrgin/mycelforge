@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "src/**"
+      - "scripts/**"
       - "pages.html"
       - "vite.config.pages.ts"
       - "package.json"
@@ -35,6 +36,18 @@ jobs:
 
       - name: Install locked dependencies
         run: npm ci --no-audit --no-fund
+
+      - name: Run repository regression tests
+        run: npm test
+
+      - name: Type-check the web app
+        run: npm run typecheck
+
+      - name: Verify mirrored MycelForge sources
+        run: npm run check:mycel-mirrors
+
+      - name: Verify CLI output and example briefs
+        run: npm run check:forge-cli
 
       - name: Run MycelForge engine tests
         run: npm run test:mycel
