@@ -1,0 +1,13 @@
+{
+  "intent": "insulation",
+  "climate": "temperate",
+  "substrates": [
+    "straw",
+    "hemp",
+    "sawdust"
+  ],
+  "priority": "balanced",
+  "scale": "panel",
+  "press": "auto",
+  "maxDays": 16
+}

@@ -1,0 +1,15 @@
+{
+  "name": "mycelforge",
+  "version": "0.1.0",
+  "description": "MycelForge — Ergin Lab mycelium biomaterial formulation and growth-protocol engine. Origin: Ergin Kaplan, Ergin Lab. Signature: EL-MF-ERGIN-KAPLAN-2026.",
+  "author": "Ergin Kaplan (Ergin Lab)",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test src/lib/mycel/engine.test.ts",
+    "forge": "node --experimental-strip-types cli/forge.ts"
+  }
+}

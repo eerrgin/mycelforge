@@ -1,0 +1,13 @@
+{
+  "intent": "load-bearing",
+  "climate": "temperate",
+  "substrates": [
+    "sawdust",
+    "hemp",
+    "straw"
+  ],
+  "priority": "strength",
+  "scale": "panel",
+  "press": "on",
+  "maxDays": 21
+}

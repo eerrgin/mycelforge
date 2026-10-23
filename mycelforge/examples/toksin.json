@@ -1,0 +1,13 @@
+{
+  "intent": "toxin-sorption",
+  "climate": "humid",
+  "substrates": [
+    "sawdust",
+    "straw",
+    "coffee"
+  ],
+  "priority": "balanced",
+  "scale": "petri",
+  "press": "off",
+  "maxDays": 14
+}
