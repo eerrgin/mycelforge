@@ -37,7 +37,7 @@ npm run test:mycel
 npm run forge
 ```
 
-Web atölyesini GitHub Pages için derlemek için `npm run build:pages` kullanılır. Yayınlanan sürüm aynı `src/lib/mycel` formül motorunu çağırır; üretim ve sertifikasyon kararı olarak değerlendirilmemelidir.
+Web atölyesini `npm run build:pages` ile yerelde derleyebilirsin. CI, `npm test`, `npm run typecheck`, motor testlerini ve statik derlemeyi kontrol eder. Canlı sürüm [ana sitenin `/mycelforge/` adresinde](https://eerrgin.github.io/mycelforge/) yayınlanır; yayın akışı [ana site deposunda](https://github.com/eerrgin/eerrgin.github.io/tree/main/.github/workflows) bulunur. Çıktılar tarama tahminidir; üretim veya sertifikasyon kararı olarak değerlendirilmemelidir.
 
 ---
 
@@ -48,10 +48,10 @@ Web atölyesini GitHub Pages için derlemek için `npm run build:pages` kullanı
 npm run forge
 
 # Tek protokol (Markdown)
-npm run forge examples/yuk.json
+npm run forge -- examples/yuk.json
 
 # JSON çıktı
-npm run forge examples/yalitim.json --json
+npm run forge -- examples/yalitim.json --json
 ```
 
 Örnek brief (`examples/yalitim.json`):
@@ -116,22 +116,21 @@ if (lab.ok) {
 ## Klasör yapısı
 
 ```text
+src/
+├── components/mycel/         # Web atölyesi arayüzü
+├── lib/mycel/                # Web atölyesinin formül motoru + defter durumu
+└── pages-main.tsx            # GitHub Pages statik giriş noktası
 mycelforge/
-├── cli/forge.ts              # Komut satırı
-├── examples/                 # Örnek brief JSON
-├── src/lib/mycel/
-│   ├── catalog.ts            # Tür + atık kataloğu
-│   ├── model.ts              # assess() — katsayılar burada
-│   ├── optimize.ts           # Arama + skor
-│   ├── protocol.ts           # Reçete ve adımlar
-│   ├── batch.ts              # Sanal tur + lab import
-│   ├── markdown.ts           # Protokol belgesi
-│   ├── provenance.ts         # Ergin Lab imzası
-│   └── engine.test.ts
-├── LICENSE
-├── NOTICE
-└── README.md
+├── cli/forge.ts              # Komut satırı aracı
+├── examples/                 # Örnek brief JSON dosyaları
+├── src/lib/mycel/            # Taşınabilir motor paketi
+└── studio/                   # Web bileşenlerinin taşınabilir eşleri
+pages.html                    # Statik web derlemesinin HTML girişi
+vite.config.pages.ts          # /mycelforge/ alt yolu için derleme ayarı
+scripts/check-mycel-mirrors.mjs # Kopya kaynakların tutarlılık kontrolü
 ```
+
+Web arayüzü kökteki `src/` dosyalarını kullanır. CLI paketi kendi başına da çalışabilsin diye motor ve sunum bileşenlerinin bir kopyasını `mycelforge/` altında tutarız; bu eş kopyalar `npm run check:mycel-mirrors` ile birebir karşılaştırılır. Canlı web sürümü ana sitenin `/mycelforge/` adresine yayınlanır.
 
 ### Nereyi değiştirirsin?
 
