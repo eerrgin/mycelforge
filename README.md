@@ -27,14 +27,17 @@ Her formülün kimliği `EL-MF-` ile başlar. Markdown ve JSON protokolde **Ergi
 
 ## Kurulum
 
-Node.js **22+** gerekir. Bağımlılık yok.
+Node.js **22+** gerekir. Komut satırı motoru ek runtime bağımlılığı istemez; web atölyesi için depo bağımlılıkları kullanılır.
 
 ```bash
 git clone https://github.com/eerrgin/mycelforge.git
 cd mycelforge
-npm test
+npm ci
+npm run test:mycel
 npm run forge
 ```
+
+Web atölyesini GitHub Pages için derlemek için `npm run build:pages` kullanılır. Yayınlanan sürüm aynı `src/lib/mycel` formül motorunu çağırır; üretim ve sertifikasyon kararı olarak değerlendirilmemelidir.
 
 ---
 
