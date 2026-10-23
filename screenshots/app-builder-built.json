@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "MycelForge",
+      "hasCanvas": false,
+      "bodyTextLen": 3863,
+      "bodyTextHash": "e3cdbabfa789504cc0ef4648e20cc6a9fdc21560700d50866e825fd34c7645d7",
+      "bodyTextPrefix": "MycelForge Ergin Lab · Ergin Kaplan Atölye Defter Model Atölye A",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "MycelForge",
+      "hasCanvas": false,
+      "bodyTextLen": 3863,
+      "bodyTextHash": "e3cdbabfa789504cc0ef4648e20cc6a9fdc21560700d50866e825fd34c7645d7",
+      "bodyTextPrefix": "MycelForge Ergin Lab · Ergin Kaplan Atölye Defter Model Atölye A",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
