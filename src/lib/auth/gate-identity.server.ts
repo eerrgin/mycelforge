@@ -13,7 +13,7 @@ const JWKS_CACHE_TTL_MS = 300_000;
 const PREVIEW_AUDIENCE = "preview";
 export const PREVIEW_GATE_ORIGIN = "http://127.0.0.1:6014";
 const FALLBACK_EMAIL_DOMAIN = "viewer.grok.invalid";
-const FALLBACK_NAME = "Grok user";
+const FALLBACK_NAME = "Atölye kullanıcısı";
 
 export type GateIdentity = {
   sub: string;
