@@ -2,7 +2,7 @@
  * Self-hosted Better Auth for THIS app (server-only).
  *
  * Pre-wired for live preview + deploy — do not rewrite this file. To enable
- * local email/password, flip the flag in `./email-password` only (see auth skill).
+ * local email/password, flip the flag in `./email-password` only (see the project authentication notes).
  *
  * The app runs its own Better Auth at `/api/auth/*`, so the session cookie stays
  * on this app's own origin. Sign-in federates to the shared **Grok auth broker**
