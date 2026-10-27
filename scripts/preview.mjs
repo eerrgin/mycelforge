@@ -270,11 +270,11 @@ async function stop(announce = true) {
   if (!outcome.ok) {
     // Keep the pidfile: a survivor the port scan cannot attribute leaves it as
     // the only record a retry could use.
-    console.error(`[ergin-atolye-preview] ${outcome.error}`);
+    console.error(`[preview] ${outcome.error}`);
     return false;
   }
   rmSync(PID_FILE, { force: true });
-  if (announce) console.log(`[ergin-atolye-preview] ${outcome.message}`);
+  if (announce) console.log(`[preview] ${outcome.message}`);
   return true;
 }
 
@@ -319,24 +319,24 @@ async function restart() {
       failure ??
       `nothing answered on ${PREVIEW_URL} within ${secs}s — check that vite.config.ts ` +
         `still sets preview.port ${PREVIEW_PORT}`;
-    console.error(`[ergin-atolye-preview] ${why} — see ${LOG_FILE}`);
+    console.error(`[preview] ${why} — see ${LOG_FILE}`);
     // A server that binds a few seconds later would serve a build the agent has
     // already been told to distrust.
     await stop(false);
     return 1;
   }
-  console.log(`[ergin-atolye-preview] serving ${PREVIEW_URL} (pid ${child.pid}, log ${LOG_FILE})`);
+  console.log(`[preview] serving ${PREVIEW_URL} (pid ${child.pid}, log ${LOG_FILE})`);
   return 0;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const args = parsePreviewArgs(process.argv.slice(2));
   if (args.error) {
-    console.error(`[ergin-atolye-preview] ${args.error}`);
+    console.error(`[preview] ${args.error}`);
     process.exit(1);
   }
   if (!existsSync("/proc/self")) {
-    console.error("[ergin-atolye-preview] no /proc — this script only runs inside the sandbox");
+    console.error("[preview] no /proc — this script only runs inside the sandbox");
     process.exit(1);
   }
   process.exitCode = args.action === "stop" ? ((await stop()) ? 0 : 1) : await restart();
