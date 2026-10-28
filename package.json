@@ -22,6 +22,7 @@
     "forge": "node --experimental-strip-types mycelforge/cli/forge.ts",
     "test:mycel": "node --experimental-strip-types --test src/lib/mycel/engine.test.ts mycelforge/src/lib/mycel/engine.test.ts",
     "build:pages": "vite build --config vite.config.pages.ts",
+    "sync:mycel-mirrors": "node scripts/sync-mycel-mirrors.mjs",
     "check:mycel-mirrors": "node scripts/check-mycel-mirrors.mjs",
     "check:forge-cli": "node scripts/check-forge-cli.mjs"
   },
