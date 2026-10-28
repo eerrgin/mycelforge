@@ -1,0 +1,12 @@
+{
+  "name": "ergin-atolye-forgelab",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Explainable, deterministic decision-core prototype for mycelium biomaterial protocol review.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node src/cli.mjs examples/input.json"
+  }
+}
