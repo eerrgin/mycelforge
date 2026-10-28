@@ -1,0 +1,16 @@
+{
+  "name": "ergin-kaplan-resilience-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Small testable error-handling examples by Ergin Kaplan",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test packages/*/*.test.mjs",
+    "test:guardrail": "node --test packages/guardrail/*.test.mjs",
+    "test:offline": "node --test packages/offline-queue/*.test.mjs",
+    "test:browser": "node --test packages/browser-probe/*.test.mjs"
+  }
+}
