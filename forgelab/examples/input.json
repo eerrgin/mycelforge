@@ -1,0 +1,6 @@
+{
+  "substrate": { "fiber": 55, "nutrient": 25, "binder": 20 },
+  "moisturePercent": 60,
+  "temperatureC": 24,
+  "durationDays": 14
+}
