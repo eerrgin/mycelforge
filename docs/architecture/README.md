@@ -65,6 +65,7 @@ Depo kökünde:
 npm run typecheck
 npm test
 npm run lint
+npm run sync:mycel-mirrors # canonical src/ kaynaklarından taşınabilir kopyaları üretir
 npm run check:mycel-mirrors
 npm run check:forge-cli
 npm run build:pages

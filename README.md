@@ -163,6 +163,12 @@ MycelForge, **Ergin Kaplan** tarafından **Ergin Lab**'da kuruldu.
 
 ---
 
+## Mimari ve katkı rehberi
+
+Atölye modülleri, veri sözleşmeleri, hata modeli, güvenli refactor sırası ve öğrenci sunum planı için [Ergin Atölye mimari rehberine](./docs/architecture/README.md) bakın.
+
+Taşınabilir CLI/Studio kopyalarını kanonik uygulama kaynaklarından yeniden üretmek için `npm run sync:mycel-mirrors`, tutarlılığı doğrulamak için `npm run check:mycel-mirrors` çalıştırın. `src/` altındaki kanonik dosyaları düzenleyin; `mycelforge/` altındaki eş dosyaları elle değiştirmeyin.
+
 ## Lisans
 
 [MIT](./LICENSE) — Copyright (c) 2026 Ergin Kaplan, Ergin Lab
